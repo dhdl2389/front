@@ -9,8 +9,9 @@
     .wrap {
       width: 800px;
       padding: 20px;
-      border: 1px solid black;
+      border: 5px solid black;
       margin: 0 auto;
+      border-radius: 9%;
     }
     .img_wrap {
       width: 350px;
@@ -20,6 +21,7 @@
       background-image: url(./황태.jpg);
       background-position: center;
       background-size: cover;
+      border-radius: 9%;
     }
 
     .info_wrap {
@@ -30,6 +32,7 @@
       width: 150px;
       height: 30px;
       font-size: larger;
+      background-color: aqua;
     }
 
     select {
@@ -53,6 +56,10 @@
       border: 0px;
       margin-left: -12px;
     }
+
+    label {
+      font-size: 23px;
+    }
   </style>
   <body>
     <div class="wrap">
@@ -63,20 +70,18 @@
       <p style="text-align: center; font-size: larger">
         평창올림픽의 메카 대관령 800고지 황태덕장에서<br />
         3개월이상 얼었다 녹았다 수천번을 반복하여 자연숙성된<br />
-        감칠맛나는 현대인의 건강식품 대관령 하늘찬 황태!<br />
-        대관령의 바람과 햇살이 빚은 건강한 먹거리입니다.
+        감칠맛나는 현대인의 <mark>건강식품 대관령 황태!</mark>
       </p>
-
       <hr />
 
-      <p style="text-align: center; font-size: 30px; margin-bottom: 1">
+      <p style="text-align: center; font-size: 35px; margin-bottom: 1">
         주문내역
       </p>
 
       <div class="info_wrap">
         <button>사이즈</button>
         <select>
-          <option>선택하세요</option>
+          <option style="text-align: center">선택하세요</option>
           <option>소</option>
           <option>중</option>
           <option>대</option>
@@ -85,29 +90,26 @@
 
         <button>수량</button>
         <select>
-          <option>선택하세요</option>
-          <option>1</option>
-          <option>2</option>
-          <option>3</option>
-          <option>4</option>
-          <option>5</option>
-          <option>6</option>
-          <option>7</option>
-          <option>8</option>
-          <option>9</option>
+          <option style="text-align: center">선택하세요</option>
           <option>10</option>
+          <option>20</option>
+          <option>40</option>
+          <option>50</option>
+          <option>60</option>
+          <option>70</option>
         </select>
+        <br />
 
         <fieldset>
-          <label for="user-name;" style="font-size: 23px">주문자 이름</label> :
+          <label for="user-name;">주문자 이름</label>
           <input type="text" id="user-name" />
         </fieldset>
         <fieldset>
-          <label for="user-name;" style="font-size: 23px">배송지 입력</label> :
+          <label for="user-name;">배송지 입력</label>
           <input type="text" id="user-name" />
         </fieldset>
         <fieldset>
-          <label for="user-name;" style="font-size: 23px">전화번호</label> :
+          <label for="user-name;">전화번호</label>
           <input type="text" id="user-name" />
         </fieldset>
 
