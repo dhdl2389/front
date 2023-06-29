@@ -19,9 +19,21 @@
           height="200"
         />
         <div id="small-pic">
-          <img src="imgs/coffee-pink.jpg" class="small" />
-          <img src="imgs/coffee-blue.jpg" class="small" />
-          <img src="imgs/coffee-gray.jpg" class="small" />
+          <img
+            src="imgs/coffee-pink.jpg"
+            class="small"
+            onclick="changeImg1()"
+          />
+          <img
+            src="imgs/coffee-blue.jpg"
+            class="small"
+            onclick="changeImg2()"
+          />
+          <img
+            src="imgs/coffee-gray.jpg"
+            class="small"
+            onclick="changeImg3()"
+          />
         </div>
       </div>
       <div id="desc">
@@ -33,7 +45,8 @@
           <li>로스팅 : 2019.06.17</li>
           <button>장바구니 담기</button>
         </ul>
-        <a href="#" id="view">상세 설명 보기</a>
+        <a href="#" id="view" onclick="show()">상세 설명 보기</a>
+        <a href="#" id="view2" onclick="hide()">상세 설명 숨기기</a>
       </div>
       <hr />
       <div id="detail">
@@ -58,8 +71,56 @@
       </div>
     </div>
 
-    <script src="js/product.js"></script>
+    <script>
+      function show() {
+        // alert("aa");
 
-    <script></script>
+        // DOM 제어
+        // document  <=html문서의 모든 태그 tree구조로 메모리 로드
+        //
+        let detailE = document.getElementById("detail");
+        // alert(detailE);
+        detailE.style.display = "block";
+      }
+
+      function hide() {
+        // alert("call");
+        let detailE = document.getElementById("detail");
+        detailE.style.display = "none";
+      }
+
+      function changeImg1() {
+        //alert("asd")
+
+        //cup id 가진 태그 찾아오기
+        let cupE = document / getElementById("cup");
+        //alert("cupE")
+        cupE.src = "imgs/coffee-pink.jpg";
+
+        //cup 태그의 src 속성바꾸기
+      }
+
+      function changeImg2() {
+        //alert("asd")
+
+        //cup id 가진 태그 찾아오기
+        let cupE = document / getElementById("cup");
+        //alert("cupE")
+        cupE.src = "imgs/coffee-blue.jpg";
+
+        //cup 태그의 src 속성바꾸기
+      }
+
+      function changeImg3() {
+        //alert("asd")
+
+        //cup id 가진 태그 찾아오기
+        let cupE = document / getElementById("cup");
+        //alert("cupE")
+        cupE.src = "imgs/coffee-gray.jpg";
+
+        //cup 태그의 src 속성바꾸기
+      }
+    </script>
   </body>
 </html>

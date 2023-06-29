@@ -33,7 +33,8 @@
           <li>로스팅 : 2019.06.17</li>
           <button>장바구니 담기</button>
         </ul>
-        <a href="#" id="view">상세 설명 보기</a>
+        <a href="#" id="view" onclick="show()">상세 설명 보기</a>
+        <a href="#" id="view2" onclick="hide()">상세 설명 숨기기</a>
       </div>
       <hr />
       <div id="detail">
@@ -58,8 +59,23 @@
       </div>
     </div>
 
-    <script src="js/product.js"></script>
+    <script>
+      function show() {
+        // alert("aa");
 
-    <script></script>
+        // DOM 제어
+        // document  <=html문서의 모든 태그 tree구조로 메모리 로드
+        //
+        let detailE = document.getElementById("detail");
+        // alert(detailE);
+        detailE.style.display = "block";
+      }
+
+      function hide() {
+        // alert("call");
+        let detailE = document.getElementById("detail");
+        detailE.style.display = "none";
+      }
+    </script>
   </body>
 </html>

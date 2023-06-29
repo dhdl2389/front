@@ -33,7 +33,7 @@
           <li>로스팅 : 2019.06.17</li>
           <button>장바구니 담기</button>
         </ul>
-        <a href="#" id="view">상세 설명 보기</a>
+        <a href="#" id="view" onclick="toggle()">상세 설명 보기</a>
       </div>
       <hr />
       <div id="detail">
@@ -58,8 +58,39 @@
       </div>
     </div>
 
-    <script src="js/product.js"></script>
+    <script>
+      //  보이기/안보이기 상태 (값)를 저장할 변수
+      //  보이기/안보이기 상태 (값) :   1(보이는 상태)  ,  0(안보이는 상태)
+      let flag = 1;
+      function toggle() {
+        // alert("toggle");
+        if (flag == 1) {
+          let detailE = document.getElementById("detail");
+          detailE.style.display = "block";
+          flag = 0;
+        } else if (flag == 0) {
+          let detailE = document.getElementById("detail");
+          detailE.style.display = "none";
+          flag = 1;
+        }
+      }
 
-    <script></script>
+      // function show() {
+      //   // alert("aa");
+
+      //   // DOM 제어
+      //   // document  <=html문서의 모든 태그 tree구조로 메모리 로드
+      //   //
+      //   let detailE = document.getElementById("detail");
+      //   // alert(detailE);
+      //   detailE.style.display = "block";
+      // }
+
+      // function hide() {
+      //   // alert("call");
+      //   let detailE = document.getElementById("detail");
+      //   detailE.style.display = "none";
+      // }
+    </script>
   </body>
 </html>

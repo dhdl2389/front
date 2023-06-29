@@ -19,9 +19,21 @@
           height="200"
         />
         <div id="small-pic">
-          <img src="imgs/coffee-pink.jpg" class="small" />
-          <img src="imgs/coffee-blue.jpg" class="small" />
-          <img src="imgs/coffee-gray.jpg" class="small" />
+          <img
+            src="imgs/coffee-pink.jpg"
+            class="small"
+            onclick="changeImg(this)"
+          />
+          <img
+            src="imgs/coffee-blue.jpg"
+            class="small"
+            onclick="changeImg(this)"
+          />
+          <img
+            src="imgs/coffee-gray.jpg"
+            class="small"
+            onclick="changeImg(this)"
+          />
         </div>
       </div>
       <div id="desc">
@@ -58,8 +70,16 @@
       </div>
     </div>
 
-    <script src="js/product.js"></script>
-
-    <script></script>
+    <script>
+      function changeImg(obj) {
+        //this => 매개변수
+        //alert("asdf")
+        // alert(obj);
+        // alert(obj.src);
+        let newSrc = obj.src;
+        let cupE = document.getElementById("cup"); //대상
+        cupE.src = newSrc;
+      }
+    </script>
   </body>
 </html>
